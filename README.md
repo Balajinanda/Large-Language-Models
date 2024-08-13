@@ -13,18 +13,16 @@
 - [Results](#results)
 
 ## Overview
-This project implements a text classification model to categorize emotions such as joy, sadness, anger, etc., in given text data. The model is based on the BERT (Bidirectional Encoder Representations from Transformers) architecture, which has proven effective in various NLP tasks.
+The main aim of the project is to implement a text classification model to categorize the TREC data. The model is based on the BERT architecture, which has proven effective in various NLP tasks.
 
 ## Dataset
-The dataset used in this project is the `dair-ai/emotion` dataset from Hugging Face's `datasets` library. The dataset consists of text samples labeled with different emotions.
+The dataset used in this project is the `TREC-5` dataset from Hugging Face's `datasets` library. The dataset consists of text data with 6 types of lables.
 
-- **Training set**: 16,000 samples
-- **Validation set**: 2,000 samples
-- **Test set**: 2,000 samples
-
+- **Training set**: 5452 Labels
+- **Test set**: 500 Labels
 
 ## Exploratory Data Analysis (EDA)
-The project includes an EDA step to understand the distribution of emotions in the dataset. This involves plotting the frequency and proportion of each emotion category in the training, validation, and test sets.
+The project includes an EDA step to understand the breakdown of labels in the dataset.
 
 ## Model Architecture
 The model uses a pre-trained BERT model from Hugging Face's `transformers` library. The architecture is as follows:
@@ -33,22 +31,20 @@ The model uses a pre-trained BERT model from Hugging Face's `transformers` libra
 - **Dense Layer**: A fully connected layer that maps the [CLS] token's output from BERT to the emotion categories using a softmax activation function.
 
 ## Training and Fine-Tuning
-The BERT model is fine-tuned on the emotion classification task using the following settings:
+The BERT model is fine-tuned using the following settings:
 
-- **Optimizer**: Adam with a learning rate of 1e-5
-- **Loss Function**: Sparse Categorical Crossentropy
+- **Optimizer**: AdamW with a learning rate of 5e-5
 - **Metrics**: Accuracy
-- **Epochs**: 8
+- **Epochs**: 3
 
-During training, the model's performance is monitored on the validation set to prevent overfitting.
+During training, the model's performance is monitored on the test set to avoid overfitting.
 
 ## Evaluation
-The model's performance is evaluated on the test set, achieving the following results:
+The model's performance is evaluated on the test set.
 
-- **Test Accuracy**: 92.20%
-- **Test Loss**: 0.2231
+- **Test Accuracy**: 96.20%
 
-Confusion matrices and classification reports are also generated to analyze the model's performance across different emotion categories.
+Confusion matrices and classification reports are also generated to analyze the model's performance across different labels.
 
 ## Results
-The fine-tuned BERT model shows high accuracy in classifying emotions in text, with consistent performance across training, validation, and test datasets. The model's learning curves and confusion matrices are available in the results section.
+The fine-tuned BERT model shows high accuracy for the given dataset, with consistent performance across training, and test datasets. The model's confusion matrix and classification reports are available in the results section.

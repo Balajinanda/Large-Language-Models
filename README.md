@@ -1,9 +1,7 @@
 # LLM-MODEL-ASSIGNMENT
-# HUMAN EMOTION DETECTION USING MACHINE LEARNING
+# TEXT CLASSIFICATION USING BERT MODEL
 
 ---
-
-This repository contains a project focused on building and fine-tuning a BERT-based model to classify emotions in text data. The project uses the `dair-ai/emotion` dataset and leverages the `transformers` library from Hugging Face along with TensorFlow for model training.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -13,8 +11,6 @@ This repository contains a project focused on building and fine-tuning a BERT-ba
 - [Training and Fine-Tuning](#training-and-fine-tuning)
 - [Evaluation](#evaluation)
 - [Results](#results)
-- [License](#license)
-- [Citation](#citation)
 
 ## Overview
 This project implements a text classification model to categorize emotions such as joy, sadness, anger, etc., in given text data. The model is based on the BERT (Bidirectional Encoder Representations from Transformers) architecture, which has proven effective in various NLP tasks.
